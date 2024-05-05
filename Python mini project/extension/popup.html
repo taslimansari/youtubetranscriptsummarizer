@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Summarizer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            /* Light mode background color */
+            color: #343a40;
+            /* Light mode text color */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        /* Dark mode styles */
+        body[data-theme='dark'] {
+            background-color: #343a40;
+            color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            height: 100vh;
+            padding-top: 50px;
+            position: relative;
+            background-color: aliceblue;
+            padding: 5rem 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            width: 20%;
+        }
+
+        button {
+            border-radius: 8px;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            margin: 2rem 0rem;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 1rem;
+            background-color: white;
+            font-weight: 600;
+            border-radius: 10px;
+            text-align: justify;
+            padding: 1rem;
+            height:10rem;
+            overflow-y: auto;
+        }
+
+        p > span {
+            color: lightgray;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>YouTube Transcript Summarizer</h1>
+        <div class="form-group">
+            <label for="url">YouTube URL</label>
+            <input id="url" type="text" class="form-control" placeholder="Enter YouTube URL">
+        </div>
+        <button id="summarise" disabled type="button" class="btn btn-primary">Summarize</button>
+        <br>
+        <h3>Transcript</h3>
+        <p id="transcript"><span>Transcript here ....</span></p>
+        <h3>Summary</h3>
+        <p id="summary"><span>Summary here ...</span></p>
+        <br>
+        <br>
+
+    </div>
+
+    <!-- Bootstrap JS and jQuery (for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
